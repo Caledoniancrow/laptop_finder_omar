@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <title>Illustration of the Lenovo LOQ 15</title>
+  <defs>
+    <clipPath id="screen-13">
+      <rect x="85" y="27" width="230" height="140" rx="5"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="200" cy="212" rx="176" ry="9" fill="#0A1222" opacity=".14"/>
+  <rect x="76" y="18" width="248" height="164" rx="12" fill="#59616C" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <g clip-path="url(#screen-13)">
+    <rect x="85" y="27" width="230" height="140" fill="#0E1A1C"/>
+    <path d="M85 167 L211.5 52.2 L315 167 Z" fill="#14363B"/>
+    <path d="M126.4 167 L227.6 80.2 L292.0 167 Z" fill="#2EE3C7" opacity=".85"/>
+    <circle cx="264.4" cy="69.0" r="19.6" fill="none" stroke="#9BF76B" stroke-width="4"/>
+    <rect x="97" y="39" width="38" height="4" rx="2" fill="#9BF76B"/>
+    <rect x="97" y="48" width="28" height="4" rx="2" fill="#9BF76B"/>
+    <rect x="97" y="57" width="18" height="4" rx="2" fill="#9BF76B"/>
+  </g>
+  <circle cx="200" cy="23.0" r="1.8" fill="#424952"/>
+  <rect x="24" y="182" width="352" height="18" rx="8" fill="#6B7480" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <rect x="24" y="182" width="352" height="3" fill="#424952" opacity=".55"/>
+  <rect x="172" y="182" width="56" height="5" rx="2.5" fill="#424952"/>
+  <rect x="130" y="194" width="140" height="3" rx="1.5" fill="#2EE3C7"/><rect x="44" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="316" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="53" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="325" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="62" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="334" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="71" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="343" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="80" y="188" width="4" height="8" rx="2" fill="#424952"/><rect x="352" y="188" width="4" height="8" rx="2" fill="#424952"/>
+</svg>

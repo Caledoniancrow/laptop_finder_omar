@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <title>Illustration of the HP OmniBook X 14</title>
+  <defs>
+    <clipPath id="screen-12">
+      <rect x="82" y="24" width="236" height="146" rx="5"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="200" cy="203" rx="176" ry="9" fill="#0A1222" opacity=".14"/>
+  <rect x="76" y="18" width="248" height="164" rx="12" fill="#C3CBD3" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <g clip-path="url(#screen-12)">
+    <rect x="82" y="24" width="236" height="146" fill="#DDF0DF"/>
+    <path d="M82 85.3 C152.8 63.3 223.6 109.3 318 79.3 V170 H82 Z" fill="#A5D7AD"/>
+    <path d="M82 111.6 C152.8 89.6 223.6 135.6 318 105.6 V170 H82 Z" fill="#5BAE72"/>
+    <path d="M82 137.9 C152.8 115.9 223.6 161.9 318 131.9 V170 H82 Z" fill="#2E7A46"/>
+  </g>
+  <circle cx="200" cy="21.5" r="1.8" fill="#97A2AD"/>
+  <rect x="24" y="182" width="352" height="9" rx="4.5" fill="#D5DCE2" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <rect x="24" y="182" width="352" height="3" fill="#97A2AD" opacity=".55"/>
+  <rect x="172" y="182" width="56" height="5" rx="2.5" fill="#97A2AD"/>
+  
+</svg>

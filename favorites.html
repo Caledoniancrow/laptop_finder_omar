@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="saver" class="scheme-light performance:scheme-dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your favorites | Student Laptop Finder</title>
+  <meta name="description" content="The laptops you saved, with their total and average price.">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="dist/output.css">
+  <script src="src/js/theme-init.js"></script>
+  <script type="module" src="src/js/favorites-page.js"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-page font-sans text-ink antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-brand focus:px-4 focus:py-2 focus:font-bold focus:text-brand-ink">Skip to main content</a>
+
+  <header class="sticky top-0 z-30 border-t-4 border-b border-t-brand border-b-line bg-surface">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3 sm:px-6 lg:px-8">
+      <a href="index.html" class="mr-auto flex items-center gap-2 rounded-lg font-extrabold text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand">
+        <svg class="h-6 w-9" viewBox="0 0 36 24" fill="none" aria-hidden="true">
+          <rect x="1.5" y="3.5" width="29" height="17" rx="4" stroke="currentColor" stroke-width="3"/>
+          <rect x="32" y="8.5" width="3" height="7" rx="1.5" fill="currentColor"/>
+          <rect x="6" y="8" width="5" height="8" rx="1.2" class="fill-brand"/>
+          <rect x="13" y="8" width="5" height="8" rx="1.2" class="fill-brand"/>
+          <rect x="20" y="8" width="5" height="8" rx="1.2" class="fill-brand"/>
+        </svg>
+        <span class="text-lg leading-tight"><span class="hidden lg:inline">Student </span>Laptop Finder</span>
+      </a>
+
+      <nav id="site-nav" class="order-last hidden w-full md:order-none md:block md:w-auto" aria-label="Main">
+        <ul class="flex flex-col gap-1 border-t border-line pt-2 md:flex-row md:items-center md:border-0 md:pt-0">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="laptops.html" class="nav-link">Laptops</a></li>
+          <li><a href="favorites.html" class="nav-link" aria-current="page">Favorites <span class="min-w-6 rounded-full bg-sunken px-1.5 text-center text-sm tabular-nums" data-favorites-count>0</span></a></li>
+          <li><a href="compare.html" class="nav-link">Compare <span class="min-w-6 rounded-full bg-sunken px-1.5 text-center text-sm tabular-nums" data-compare-count>0</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-1 rounded-full border border-edge p-1" role="group" aria-label="Theme">
+        <button type="button" class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-bold text-muted transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand aria-pressed:bg-brand aria-pressed:text-brand-ink" data-theme-choice="saver" aria-pressed="true" title="Battery Saver Mode">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 19c9 0 15-6 15-15C11 4 5 9 5 19z M5 19c2.5-4.5 6-8 10-10"/>
+          </svg>
+          <span class="sr-only lg:not-sr-only">Battery Saver</span>
+        </button>
+        <button type="button" class="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1.5 text-sm font-bold text-muted transition hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand aria-pressed:bg-brand aria-pressed:text-brand-ink" data-theme-choice="performance" aria-pressed="false" title="Performance Mode">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M13 2 4 14h7l-1 8 9-12h-7z"/>
+          </svg>
+          <span class="sr-only lg:not-sr-only">Performance</span>
+        </button>
+      </div>
+
+      <button type="button" id="menu-toggle" class="inline-flex size-11 items-center justify-center rounded-full border border-edge text-ink transition hover:border-brand focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand md:hidden" aria-controls="site-nav" aria-expanded="false">
+        <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 7h16 M4 12h16 M4 17h16"/>
+        </svg>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" class="flex-1">
+    <section class="bg-band text-band-ink" aria-labelledby="page-title">
+      <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <h1 id="page-title" class="text-3xl font-extrabold tracking-tight sm:text-4xl">Your favorites</h1>
+        <p class="mt-2 max-w-2xl text-band-muted">The laptops you saved on any page. They stay here after a reload until you remove them.</p>
+      </div>
+    </section>
+
+    <section id="favorites-summary" class="hidden border-b border-line bg-soft" aria-labelledby="summary-title">
+      <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <h2 id="summary-title" class="sr-only">Summary of your favorites</h2>
+        <dl class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-8">
+          <div>
+            <dt class="text-sm text-ink">Saved laptops</dt>
+            <dd id="favorites-count" class="text-xl font-extrabold whitespace-nowrap text-strong tabular-nums sm:text-2xl">0</dd>
+          </div>
+          <div>
+            <dt class="text-sm text-ink">Total price</dt>
+            <dd id="favorites-total" class="text-xl font-extrabold whitespace-nowrap text-strong tabular-nums sm:text-2xl">EGP 0</dd>
+          </div>
+          <div>
+            <dt class="text-sm text-ink">Average price</dt>
+            <dd id="favorites-average" class="text-xl font-extrabold whitespace-nowrap text-strong tabular-nums sm:text-2xl">EGP 0</dd>
+          </div>
+        </dl>
+        <div class="flex flex-wrap gap-3">
+          <a href="compare.html" class="btn-action">Compare favorites</a>
+          <button type="button" id="clear-favorites" class="btn-quiet">Clear all</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 lg:px-8" aria-labelledby="list-title">
+      <h2 id="list-title" class="sr-only">Saved laptops</h2>
+      <div id="favorites-grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+  </main>
+
+  <footer class="bg-band text-band-muted">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10 text-sm sm:px-6 md:flex-row md:items-start md:justify-between lg:px-8">
+      <div class="max-w-md">
+        <p class="font-bold text-band-ink">Student Laptop Finder</p>
+        <p class="mt-1">SW302 User Interface Development, Assignment 2. Made by Omar Amgad.</p>
+        <p class="mt-1">Prices and specs are sample data for a course project, not live shop prices.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="flex flex-wrap gap-1">
+          <li><a href="index.html" class="nav-link text-band-ink hover:bg-band-line focus-visible:outline-band-accent">Home</a></li>
+          <li><a href="laptops.html" class="nav-link text-band-ink hover:bg-band-line focus-visible:outline-band-accent">Laptops</a></li>
+          <li><a href="favorites.html" class="nav-link text-band-ink hover:bg-band-line focus-visible:outline-band-accent">Favorites</a></li>
+          <li><a href="compare.html" class="nav-link text-band-ink hover:bg-band-line focus-visible:outline-band-accent">Compare</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

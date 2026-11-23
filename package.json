@@ -1,0 +1,18 @@
+{
+  "name": "laptop-finder-omar",
+  "version": "1.0.0",
+  "description": "Student Laptop Finder, SW302 Assignment 2: browse, filter, save and compare laptops with HTML, JavaScript ES modules and Tailwind CSS 4.",
+  "author": "Omar Amgad",
+  "license": "ISC",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "@tailwindcss/forms": "^0.5.11",
+    "@tailwindcss/typography": "^0.5.20",
+    "tailwindcss": "^4.3.5"
+  }
+}

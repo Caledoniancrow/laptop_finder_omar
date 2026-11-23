@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <title>Illustration of the HP 15</title>
+  <defs>
+    <clipPath id="screen-11">
+      <rect x="88" y="30" width="224" height="134" rx="5"/>
+    </clipPath>
+  </defs>
+  <ellipse cx="200" cy="208" rx="176" ry="9" fill="#0A1222" opacity=".14"/>
+  <rect x="76" y="18" width="248" height="164" rx="12" fill="#DDE3E8" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <g clip-path="url(#screen-11)">
+    <rect x="88" y="30" width="224" height="134" fill="#F2EADB"/>
+    <circle cx="121.6" cy="143.9" r="60.3" fill="#E1CFB1" opacity=".7"/>
+    <circle cx="294.1" cy="43.4" r="40.2" fill="#E1CFB1" opacity=".5"/>
+    <rect x="132.8" y="51.4" width="134.4" height="88.4" rx="5" fill="#FFFFFF"/>
+    <rect x="132.8" y="51.4" width="134.4" height="12" rx="5" fill="#C6A576"/>
+    <rect x="142.8" y="73.4" width="91.5" height="5" rx="2.5" fill="#8C6F45" opacity=".8"/>
+    <rect x="142.8" y="86.4" width="74.4" height="5" rx="2.5" fill="#E1CFB1" opacity=".8"/>
+    <rect x="142.8" y="99.4" width="82.4" height="5" rx="2.5" fill="#8C6F45" opacity=".8"/>
+    <rect x="142.8" y="112.4" width="45.8" height="5" rx="2.5" fill="#E1CFB1" opacity=".8"/>
+  </g>
+  <circle cx="200" cy="24.5" r="1.8" fill="#B5BEC7"/>
+  <rect x="24" y="182" width="352" height="14" rx="7.0" fill="#EBEFF2" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <rect x="24" y="182" width="352" height="3" fill="#B5BEC7" opacity=".55"/>
+  <rect x="172" y="182" width="56" height="5" rx="2.5" fill="#B5BEC7"/>
+  
+</svg>
